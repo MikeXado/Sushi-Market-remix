@@ -1,4 +1,4 @@
-import { useLoaderData, useTransition } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import CardItem from "~/components/menu/CardItem";
 import HeaderMenu from "~/components/menu/HeaderMenu";
 import { redirect } from "@remix-run/node";
@@ -7,7 +7,6 @@ import {
   getCurrentClickedCateg,
   addToCart,
 } from "~/utils/firebase.server";
-import Skeleton from "../components/Skeleton";
 import menuStyle from "../styles/menu/menu.css";
 export const links = () => {
   return [
@@ -55,17 +54,12 @@ export const action = async ({ params, request }) => {
 
 function Menu() {
   const data = useLoaderData();
-  const transition = useTransition();
   return (
     <div className="menu">
       <HeaderMenu category={data?.category} menu={data.menu} />
       <div className="cards">
         {data.menu.map((card) => {
-          return transition.state === "submitting" ? (
-            <Skeleton key={card.id} className="cards-item skeleton" />
-          ) : (
-            <CardItem key={card.id} card={card} />
-          );
+          return <CardItem key={card.id} card={card} />;
         })}
       </div>
     </div>
