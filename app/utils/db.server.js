@@ -7,10 +7,8 @@ import {
 } from "firebase/auth";
 import {
   getApps,
-  applicationDefault,
   initializeApp as initializeAdminApp,
 } from "firebase-admin/app";
-
 import { getAuth as getAdminAuth } from "firebase-admin/auth";
 import { getFirestore } from "firebase-admin/firestore";
 const firebaseConfig = {
@@ -24,11 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 if (!getApps().length) {
-  initializeAdminApp({
-    credential: applicationDefault(),
-    databaseURL: "https//romsem-b19b7.firebaseio.com",
-    storageBucket: process.env.STORAGE_BUCKET,
-  });
+  initializeAdminApp();
 }
 const adminAuth = getAdminAuth();
 
