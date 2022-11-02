@@ -1,0 +1,157 @@
+.reviews {
+  width: 1300px;
+  margin: 59px auto 0 auto;
+  max-width: 100%;
+}
+
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
+  margin-top: 30px;
+}
+@media (max-width: 384px) {
+  .reviews-header {
+    flex-direction: column;
+  }
+}
+.reviews-header__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000;
+}
+.reviews-header__btn {
+  background: #111111;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #f2f2f2;
+  padding: 7px 17px;
+}
+@media (max-width: 384px) {
+  .reviews-header__btn {
+    margin-top: 30px;
+  }
+}
+
+.reviews {
+  padding: 0 15px 0 15px;
+}
+
+.reviews-item {
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 15px 10px 15px;
+  margin-top: 30px;
+}
+.reviews-item__client-info {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+.reviews-item__date {
+  color: #a4acad;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.reviews-item__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  width: 717px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.reviews-popup {
+  width: 700px;
+  margin: 50px auto 0 auto;
+  max-width: 100%;
+  background-color: #fff;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+.reviews-popup__close {
+  position: relative;
+}
+.reviews-popup__close button::before,
+.reviews-popup__close button::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  height: 15px;
+  width: 1px;
+  right: 15px;
+  top: 10px;
+}
+.reviews-popup__close button::before {
+  transform: rotate(-45deg);
+}
+.reviews-popup__close button::after {
+  transform: rotate(45deg);
+}
+.reviews-popup__message {
+  text-align: center;
+  padding: 15px;
+}
+
+.reviews-form {
+  padding: 30px 15px 0 15px;
+}
+.reviews-form .form-text {
+  font-weight: 700;
+}
+.reviews-form .comment {
+  margin-top: 20px;
+}
+.reviews-form input {
+  background: #a4acad;
+  color: #fff;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.reviews-form textarea {
+  margin-top: 10px;
+  border-radius: 10px;
+  color: #fff;
+  padding-left: 10px;
+  font-size: 18px;
+  padding-top: 10px;
+  background-color: #a4acad;
+  width: 100%;
+  min-height: 300px;
+}
+
+.reviews-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.reviews-btn button {
+  background: #000;
+  padding: 7px 14px;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.redirect {
+  text-align: center;
+  margin-top: 20px;
+}
+.redirect .link-to {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=reviews.css.map */

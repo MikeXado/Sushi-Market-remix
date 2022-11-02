@@ -1,0 +1,125 @@
+.menu {
+  width: 1300px;
+  max-width: 100%;
+  margin: 30px auto 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 15px;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
+  &__category-name {
+    display: flex;
+    align-items: center;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__category-title {
+    margin-left: 20.87px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  &__select {
+    width: 198px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.09);
+    border-radius: 15px 15px 15px 15px;
+
+    @media (max-width: 420px) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 30px;
+  margin-top: 30px;
+
+  .cards-item {
+    width: 290px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__singlepage-btn {
+      cursor: pointer;
+    }
+
+    img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 290px;
+      height: 265px;
+      text-align: center;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 20px;
+      height: 30px;
+      line-height: 30px;
+      margin-top: 31.65px;
+      padding-left: 15px;
+    }
+    &__description {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #a4acad;
+      padding-left: 15px;
+    }
+
+    &__horizontal-line {
+      width: 100%;
+      height: 0.5px;
+      background: #a4acad;
+      margin-top: 20.73px;
+    }
+
+    &__price-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px 10px 10px;
+    }
+    &__price {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__order-btn {
+      background: #f46d40;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      color: #f2f2f2;
+      padding: 5px 42px;
+      cursor: pointer;
+    }
+  }
+
+  .skeleton {
+    background: none;
+  }
+}

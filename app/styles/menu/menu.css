@@ -1,0 +1,119 @@
+.menu {
+  width: 1300px;
+  max-width: 100%;
+  margin: 30px auto 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 15px;
+}
+@media (max-width: 420px) {
+  .header-menu {
+    flex-direction: column;
+  }
+}
+.header-menu__category-name {
+  display: flex;
+  align-items: center;
+}
+.header-menu__category-name img {
+  width: 40px;
+  height: 40px;
+}
+.header-menu__category-title {
+  margin-left: 20.87px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+}
+.header-menu__select {
+  width: 198px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.09);
+  border-radius: 15px 15px 15px 15px;
+}
+@media (max-width: 420px) {
+  .header-menu__select {
+    margin-top: 30px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 30px;
+  margin-top: 30px;
+}
+.cards .cards-item {
+  width: 290px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cards .cards-item__singlepage-btn {
+  cursor: pointer;
+}
+.cards .cards-item img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  height: 265px;
+  text-align: center;
+}
+.cards .cards-item__title {
+  font-weight: 500;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 31.65px;
+  padding-left: 15px;
+}
+.cards .cards-item__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #a4acad;
+  padding-left: 15px;
+}
+.cards .cards-item__horizontal-line {
+  width: 100%;
+  height: 0.5px;
+  background: #a4acad;
+  margin-top: 20.73px;
+}
+.cards .cards-item__price-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+}
+.cards .cards-item__price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+.cards .cards-item__order-btn {
+  background: #f46d40;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #f2f2f2;
+  padding: 5px 42px;
+  cursor: pointer;
+}
+.cards .skeleton {
+  background: none;
+}
+
+/*# sourceMappingURL=menu.css.map */

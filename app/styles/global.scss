@@ -1,0 +1,41 @@
+body {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: #000;
+}
+
+.__container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.center-component {
+  margin-left: 375px;
+  background-color: #f2f2f2;
+
+  @media (max-width: 1096px) {
+    margin-left: 290px;
+  }
+
+  @media (max-width: 991px) {
+    margin: 0;
+  }
+}
+
+.current-header {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 38px 0 15px;
+  margin-top: 51.5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__text {
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

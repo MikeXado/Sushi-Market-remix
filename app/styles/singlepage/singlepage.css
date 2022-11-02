@@ -1,0 +1,134 @@
+.produce {
+  background-color: #fff;
+  width: 100%;
+  margin-top: 52px;
+  padding: 30px 0 30px 0;
+}
+
+.produce-content {
+  width: 1169px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .produce-content {
+    flex-direction: column;
+  }
+}
+.produce-content img {
+  width: 500px;
+  height: 435px;
+  max-width: 100%;
+}
+@media (max-width: 1278px) {
+  .produce-content img {
+    width: 400px;
+    height: 335px;
+  }
+}
+
+.text-produce {
+  width: 50%;
+  margin-left: 30px;
+  max-width: 100%;
+}
+@media (max-width: 760px) {
+  .text-produce {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.text-produce__name {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+}
+@media (max-width: 1142px) {
+  .text-produce__name {
+    font-size: 30px;
+  }
+}
+@media (max-width: 332px) {
+  .text-produce__name {
+    font-size: 35px;
+  }
+}
+.text-produce__weight {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ff9846;
+  margin-top: 10px;
+}
+.text-produce .price-produce {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+@media (max-width: 760px) {
+  .text-produce .price-produce {
+    justify-content: center;
+  }
+}
+.text-produce .price-produce__price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin-right: 30px;
+}
+@media (max-width: 1142px) {
+  .text-produce .price-produce__price {
+    font-size: 18px;
+  }
+}
+.text-produce .price-produce__qty {
+  display: flex;
+  align-items: center;
+}
+.text-produce .price-produce__qty .part:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+.text-produce .price-produce__qty .increment,
+.text-produce .price-produce__qty .decrement {
+  font-weight: 700;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-produce .price-produce__qty .increment:hover,
+.text-produce .price-produce__qty .decrement:hover {
+  background: #f46d40;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.text-produce .price-produce__qty .qty {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+}
+.text-produce__btn {
+  background: #f46d40;
+  border-radius: 10px;
+  color: #f2f2f2;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 5px 65px;
+  margin-top: 36px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=singlepage.css.map */
