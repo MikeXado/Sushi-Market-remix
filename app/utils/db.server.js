@@ -8,8 +8,10 @@ import {
 import {
   getApps,
   initializeApp as initializeAdminApp,
+  cert,
 } from "firebase-admin/app";
 import { getAuth as getAdminAuth } from "firebase-admin/auth";
+
 import { getFirestore } from "firebase-admin/firestore";
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
@@ -21,8 +23,17 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+const config = {
+  credential: cert({
+    projectId: process.env["FIREBASE_ADMIN_PROJECT_ID"],
+    clientEmail: process.env["FIREBASE_ADMIN_CLIENT_EMAIL"],
+    privateKey: process.env["FIREBASE_ADMIN_PRIVATE_KEY"].replace(/\\n/g, "\n"),
+  }),
+};
+
 if (!getApps().length) {
-  initializeAdminApp();
+  initializeAdminApp(config);
 }
 const adminAuth = getAdminAuth();
 
