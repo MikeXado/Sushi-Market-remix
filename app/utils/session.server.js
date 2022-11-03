@@ -61,4 +61,4 @@ async function logOut(request) {
   return await destroySession(request);
 }
 
-export { createUserSession, logOut };
+export { createUserSession, logOut, getCurrentSession };

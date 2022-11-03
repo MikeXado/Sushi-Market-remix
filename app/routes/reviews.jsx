@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import ReviewsHeader from "../components/reviews/ReviewsHeader";
 import ReviewsItem from "../components/reviews/ReviewsItem";
-import { auth } from "~/utils/db.server";
 
 import { useLoaderData, Outlet } from "@remix-run/react";
 import { redirect } from "@remix-run/node";
 import { getReviews } from "~/utils/firebase.server";
+import { getCurrentSession } from "~/utils/session.server";
 import reviewsStyles from "../styles/reviews/reviews.css";
 export const loader = async () => {
   return await getReviews();
@@ -21,11 +21,11 @@ export const links = () => {
 };
 
 export const action = async ({ request }) => {
-  const currentUser = auth.currentUser;
   const formData = await request.formData();
   const { _action, ...values } = Object.fromEntries(formData);
+  const isSession = await getCurrentSession(request);
   if (_action === "checkIfLogIn") {
-    if (!currentUser) {
+    if (!isSession) {
       return redirect("reviews/signIn");
     }
     return redirect("reviews/addReview");
