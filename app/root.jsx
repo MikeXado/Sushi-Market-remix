@@ -29,7 +29,7 @@ import {
 } from "./utils/firebase.server";
 import { useEffect, useState } from "react";
 import { auth } from "./utils/db.server";
-import { logOut } from "./utils/session.server";
+import { getCurrentSession, logOut } from "./utils/session.server";
 import homeStyle from "./styles/home/home.css";
 export const links = () => {
   return [
@@ -102,9 +102,9 @@ export const action = async ({ request }) => {
   }
 };
 
-export const loader = async () => {
+export const loader = async ({ request }) => {
   const cartItems = await getCartItems();
-  const currentUser = auth.currentUser;
+  const currentUser = await getCurrentSession(request);
 
   return { cartItems, currentUser };
 };
